@@ -40,12 +40,12 @@ public class courseComponent {
 /*---------------------------------------------------------------- */
 	// Print component of course
 	public void viewCourseComponent() {
-		System.out.println("The component of this course:");
+		System.out.println("Course component:");
 		if(this.lec==true)
-			System.out.println("Lecture");
+			System.out.println("  Lecture");
 		if(this.tut==true)
-			System.out.println("Tutorial");
+			System.out.println("  Tutorial");
 		if(this.lab==true) 
-			System.out.println("Lab");
+			System.out.println("  Lab");
 	}
 }

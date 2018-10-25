@@ -53,4 +53,19 @@ public class courseStructure {
 	public void setWeightOfParticipation(double participation) {
 		this.participation=participation;
 	}
+/*---------------------------------------------------------------- */
+	// print weight of course structure
+	public void viewCourseStructure() {
+		System.out.println("Course structure:");
+		if(this.finalExam!=0.0)
+			System.out.println("  Final examination - "+this.finalExam);
+		if(this.quiz!=0.0)
+			System.out.println("  Quiz - "+this.quiz);
+		if(this.assignment!=0.0)
+			System.out.println("  Assignmetn - "+this.assignment);
+		if(this.project!=0.0)
+			System.out.println("  Project - "+this.project);
+		if(this.participation!=0.0)
+			System.out.println("  Participation - "+this.participation);
+	}
 }

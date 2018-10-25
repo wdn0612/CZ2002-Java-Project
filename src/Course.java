@@ -11,8 +11,8 @@ public class Course {
 	private Integer vacancy; ///???????
 	private ArrayList<Students> studentList; //???????
 	
-	private courseStructure structure;
-	private courseComponent component;
+	private courseStructure structure;  // uni-directional
+	private courseComponent component;  // uni-directional
 	private Prof professors;
 /*-------------------------constructor---------------------------- */	
 	// Creates a new Course without specified attributes
@@ -84,6 +84,18 @@ public class Course {
 	public void setIndexGroupList(ArrayList<Integer> indexGroupList){
 		this.indexGroupList=indexGroupList;
 	}
+	// Print indexGroup's ID for this course
+	public void viewIndexGroupList() {
+		System.out.print("Course index: ");
+		for(int i = 0; i<indexGroupList.size(); i++)
+		{
+			System.out.print(indexGroupList.get(i));
+			if (i != indexGroupList.size() - 1) {
+				System.out.print(", ");
+			}
+		}
+		System.out.println();
+	}
 /*------------------------------------------------------------------ */	
 	// Get the course assessment structure
 	public courseStructure getCourseStructure() {
@@ -101,6 +113,18 @@ public class Course {
 	// Change the component of the course(Lecture/Tutorial/Lab)
 	public void setCourseComponent(courseComponent component) {
 		this.component=component;
+	}
+/*------------------------------------------------------------------ */
+	public void viewCourseInfo(Integer AUCredits,courseStructure structure, courseComponent component) {
+		System.out.println("ID of course: " + this.courseID);
+		System.out.println("Name of course: " + this.courseName);
+		System.out.println("AU Credits for course: " + AUCredits);
+		System.out.println("Type of course: " + this.courseType);
+		System.out.println("School of course: " + this.school);
+		viewIndexGroupList();	
+		structure.viewCourseStructure();
+		component.viewCourseComponent();
+		System.out.println("\n\n");
 	}
 }
 
