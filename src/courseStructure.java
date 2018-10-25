@@ -58,11 +58,11 @@ public class courseStructure {
 	public void viewCourseStructure() {
 		System.out.println("Course structure:");
 		if(this.finalExam!=0.0)
-			System.out.println("  Final examination - "+this.finalExam);
+			System.out.println("  Final exam - "+this.finalExam);
 		if(this.quiz!=0.0)
 			System.out.println("  Quiz - "+this.quiz);
 		if(this.assignment!=0.0)
-			System.out.println("  Assignmetn - "+this.assignment);
+			System.out.println("  Assignment - "+this.assignment);
 		if(this.project!=0.0)
 			System.out.println("  Project - "+this.project);
 		if(this.participation!=0.0)

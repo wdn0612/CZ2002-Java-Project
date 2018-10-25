@@ -86,7 +86,7 @@ public class Course {
 	}
 	// Print indexGroup's ID for this course
 	public void viewIndexGroupList() {
-		System.out.print("Course index: ");
+		System.out.print("Course index group: ");
 		for(int i = 0; i<indexGroupList.size(); i++)
 		{
 			System.out.print(indexGroupList.get(i));
@@ -116,10 +116,10 @@ public class Course {
 	}
 /*------------------------------------------------------------------ */
 	public void viewCourseInfo(Integer AUCredits,courseStructure structure, courseComponent component) {
-		System.out.println("ID of course: " + this.courseID);
-		System.out.println("Name of course: " + this.courseName);
-		System.out.println("AU Credits for course: " + AUCredits);
-		System.out.println("Type of course: " + this.courseType);
+		System.out.println("Course code: " + this.courseID);
+		System.out.println("Course name: " + this.courseName);
+		System.out.println("AU Credits: " + AUCredits);
+		System.out.println("Course type: " + this.courseType);
 		System.out.println("School of course: " + this.school);
 		viewIndexGroupList();	
 		structure.viewCourseStructure();
